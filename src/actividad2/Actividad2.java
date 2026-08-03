@@ -24,8 +24,8 @@ public class Actividad2 {
         System.out.println("================================");
 
         int[] vector = new int[totalDatos];
-
         capturarVector(vector);
+        calcularEstadisticas(vector);
 
     }
     public static void capturarVector(int[] vector) {
@@ -68,6 +68,35 @@ public class Actividad2 {
             System.out.println("Número fuera del rango.");
 
         }
+
+}
+    public static void calcularEstadisticas(int[] vector) {
+
+    int maximo = vector[0];
+    int minimo = vector[0];
+    int acumulador = 0;
+
+    for (int valor : vector) {
+
+        acumulador += valor;
+
+        if (valor > maximo) {
+            maximo = valor;
+        }
+
+        if (valor < minimo) {
+            minimo = valor;
+        }
+
+    }
+
+    media = (double) acumulador / vector.length;
+
+    System.out.println("\n===== RESULTADOS =====");
+
+    System.out.println("Mayor: " + maximo);
+    System.out.println("Menor: " + minimo);
+    System.out.println("Promedio: " + media);
 
 }
 
