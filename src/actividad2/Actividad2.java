@@ -26,6 +26,8 @@ public class Actividad2 {
         int[] vector = new int[totalDatos];
         capturarVector(vector);
         calcularEstadisticas(vector);
+        int[][] tabla = new int[3][3];
+        capturarMatriz(tabla);
 
     }
     public static void capturarVector(int[] vector) {
@@ -97,6 +99,23 @@ public class Actividad2 {
     System.out.println("Mayor: " + maximo);
     System.out.println("Menor: " + minimo);
     System.out.println("Promedio: " + media);
+
+}
+    
+    public static void capturarMatriz(int[][] tabla) {
+
+    System.out.println("\n===== MATRIZ =====");
+
+    for (int fila = 0; fila < tabla.length; fila++) {
+
+        for (int columna = 0; columna < tabla[fila].length; columna++) {
+
+            tabla[fila][columna] =
+                    solicitarNumero("Dato [" + fila + "][" + columna + "]: ");
+
+        }
+
+    }
 
 }
 
